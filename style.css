@@ -1,0 +1,102 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+body {
+  background-color: #cacaca;
+  color: #333;
+  overflow-x: hidden;
+}
+
+/* -----------Navbar--------------- */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 10%;
+  background-color: #ffffff;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+.logo span {
+  color: #007bff;
+}
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #000000;
+  font-size: 15px;
+  font-weight: bold;
+  position: relative;
+}
+
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 0%;
+  height: 2px;
+  background: #38bdf8;
+  transition: 0.3s;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+.project-container{
+    display: flex;
+    width: 100%;
+    height: auto;
+    justify-content: space-between;
+    padding-left: 200px;
+    padding-right: 20px;
+    margin-top: 20px;
+}
+.card{
+    height: 200px;
+    width: 220px;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: white;
+}
+.card-head{
+    background-color: #8fd6f5;
+    height: 80%;
+    width: 90%;
+    margin-left: 10px;
+    margin-top: 10px;
+    border-radius: 10px;
+    padding-left: 5px;
+}
+.card-head span{
+    display: flex;
+    margin-top: 10px;
+    font-weight: 500;
+    height: auto;
+}
+.card-head span p{
+    color: rgb(255, 255, 255);
+}
+.card-foot{
+    height: 20%;
+    font-weight: bold;
+    padding-left: 10px;
+    padding-right: 20px;
+    align-items: center;
+    padding-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+}
