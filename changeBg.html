@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BG Color Changer | Vansh</title>
+    <style>
+        body{
+            height: 100vh;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            justify-content: center;
+              background-color: #0f172a; /* dark blue */
+        }
+      button {
+        width: 120px;
+        height: 40px;
+        margin-left: 20px;
+        border-radius: 10px;
+      }
+      #startBtn{
+        background-color: rgb(47, 247, 47);
+        color: black;
+        border: none;
+        outline: none;
+      }
+      #stopBtn{
+        background-color: red;
+           color: black;
+        border: none;
+        outline: none;
+      }
+
+      .container{
+          background-color: transparent;
+        background-color: transparent;
+        border: 2px solid black;
+        padding: 20px;
+        border-radius: 10px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <h1>Background Color Changer</h1>
+      <div class="btn-group">
+        <button id="startBtn">Start</button>
+        <button id="stopBtn">Stop</button>
+      </div>
+    </div>
+  </body>
+  <script>
+    // -----------Create random colour------------
+    const randomcolour = function () {
+      const hex = "0123456789ABCDEF";
+      let colour = "#";
+      for (let i = 0; i < 6; i++) {
+        colour += hex[Math.floor(Math.random() * 16)];
+      }
+      return colour;
+    };
+
+    let timeout;
+    //---------------start bg change------------
+    const genratecolour = function getcolour() {
+      let createcolor = function () {
+        document.body.style.backgroundColor = randomcolour();
+      };
+      if (!timeout) {
+        timeout = setInterval(createcolor, 1000);
+      }
+    };
+    //----------stop bg change-------------
+    const stopgenratecolour = function () {
+      clearInterval(timeout);
+      timeout = null;
+    };
+    //-------------start btn-------------
+    document
+      .getElementById("startBtn")
+      .addEventListener("click", genratecolour);
+      //--------------stop btn-------------
+    document
+      .getElementById("stopBtn")
+      .addEventListener("click", stopgenratecolour);
+  </script>
+</html>
