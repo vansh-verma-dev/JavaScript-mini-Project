@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Counter app</title>
+  </head>
+  <body>
+    <section>
+      <div class="group">
+        <button id="Addbtn">Add</button>
+        <span class="counter">00</span>
+        <button id="minusbtn">Minus</button>
+      </div>
+    </section>
+  </body>
+  <script>
+    const addbtn = document.getElementById("Addbtn");
+    const minusbtn = document.getElementById("minusbtn");
+    const counter = document.querySelector(".counter");
+
+    let value = 0;
+    function counadd() {
+      counter.textContent = value.toString().padStart(2, "0");
+      if (value <= 0) {
+        minusbtn.disabled = true;
+      } else {
+        minusbtn.disabled = false;
+      }
+    }
+    counadd();
+    addbtn.addEventListener("click", () => {
+      value++;
+      counadd();
+    });
+
+    minusbtn.addEventListener("click", () => {
+      value--;
+      counadd();
+    });
+  </script>
+</html>
