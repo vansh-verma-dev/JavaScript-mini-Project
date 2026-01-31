@@ -1,0 +1,78 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background: #000;
+  color: #fff;
+}
+
+/* NAVBAR */
+nav{
+  height: 10vh;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+}
+
+nav button{
+  background: none;
+  border: none;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+/* LAYOUT */
+section{
+  height: 90vh;
+}
+
+/* ===== SIDEBAR (DESKTOP DEFAULT) ===== */
+.slide-menu{
+  position: fixed;
+  top: 10vh;
+  left: 0;                 /* desktop pe always visible */
+  width: 250px;
+  height: 90vh;
+  background: orangered;
+  padding: 20px;
+  transition: left 0.3s ease;
+}
+
+.slide-menu ul{
+  list-style: none;
+}
+
+.slide-menu li{
+  margin: 15px 0;
+  cursor: pointer;
+}
+
+/* MAIN CONTENT */
+.root{
+  margin-left: 250px;      /* sidebar ke liye space */
+  padding: 20px;
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 480px){
+
+  /* sidebar mobile me hidden */
+  .slide-menu{
+    left: -100%;
+    width: 100%;
+  }
+
+  /* button click pe show */
+  .slide-menu.active{
+    left: 0;
+  }
+
+  /* content full width */
+  .root{
+    margin-left: 0;
+  }
+}
