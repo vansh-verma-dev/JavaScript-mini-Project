@@ -1,0 +1,123 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Consolas, monospace;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #0b0f14;
+  color: #e6edf3;
+}
+
+/* CARD */
+section {
+  width: 360px;
+  padding: 26px;
+  border: 1px solid #1f2933;
+  background: #0f141a;
+  transition: 0.25s;
+}
+
+/* subtle hover (not floating) */
+section:hover {
+  border-color: #2aa198;
+}
+
+/* TITLE */
+section h1 {
+  text-align: center;
+  font-weight: 500;
+  margin-bottom: 20px;
+  color: #9cdcfe;
+  letter-spacing: 0.5px;
+}
+
+/* LABEL */
+section label {
+  display: block;
+  margin: 10px 0 6px;
+  font-size: 14px;
+  color: #8b949e;
+}
+
+/* INPUT */
+section input {
+  width: 100%;
+  padding: 9px 10px;
+  border: 1px solid #1f2933;
+  background: #0b0f14;
+  color: #e6edf3;
+  outline: none;
+  transition: 0.2s;
+}
+
+/* focus = underline feel */
+section input:focus {
+  border-color: #2aa198;
+}
+
+/* BUTTON */
+button {
+  width: 100%;
+  margin-top: 16px;
+  padding: 10px;
+  border: 1px solid #2aa198;
+  background: transparent;
+  color: #2aa198;
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+/* hover invert */
+button:hover {
+  background: #2aa198;
+  color: #0b0f14;
+}
+
+/* click feel */
+button:active {
+  transform: scale(0.98);
+}
+
+/* RESULT AREA */
+.showresult {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+  gap: 10px;
+}
+
+/* BMI NUMBER */
+#Result {
+  flex: 1;
+  font-size: 38px;
+  text-align: center;
+  border-right: 1px solid #1f2933;
+  padding: 6px;
+}
+
+/* STATUS */
+#Status {
+  flex: 1;
+  text-align: center;
+  font-size: 15px;
+  letter-spacing: 0.5px;
+  transition: 0.3s;
+}
+
+@media (max-width: 490px) {
+  body {
+    background-color: black;
+    align-items: start;
+  }
+  section{
+    background-color: transparent;
+    border: none;
+  }
+}
