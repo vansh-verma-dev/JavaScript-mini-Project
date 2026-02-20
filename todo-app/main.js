@@ -12,13 +12,18 @@ addBtn.addEventListener("click", () => {
 
   let divtag = document.createElement("div");
   divtag.className = "details";
+
   let ptage = document.createElement("P");
+
   let deletebtn = document.createElement("button");
+deletebtn.className = "deletebtn"
   deletebtn.innerText = "Delete";
   deletebtn.addEventListener("click", () => {
     divtag.remove();
   });
+
   ptage.textContent = input;
+
   todoList.appendChild(divtag);
   divtag.appendChild(ptage);
   divtag.appendChild(deletebtn);

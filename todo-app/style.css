@@ -123,8 +123,21 @@ body{
   opacity: 0.6;
 }
 .details{
+  margin-top: 10px;
+ align-items: center;
     display: flex;
     justify-content:space-between;
     padding-left: 10px;
     padding-right: 10px;
+}
+.deletebtn{
+  background-color: red;
+  color: white;
+  border: none;
+  outline: none;
+  padding: 10px;
+  border-radius: 10px;
+}
+.deletebtn:hover{
+  background-color: rgb(255, 58, 58);
 }
