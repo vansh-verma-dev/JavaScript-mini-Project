@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Quiz App - Vansh</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <div class="quiz-box">
+        <h2 id="question">Question text</h2>
+
+        <div class="options">
+            <label>
+                <input type="radio" name="option" value="0">
+                <span id="opt0"></span>
+            </label>
+
+            <label>
+                <input type="radio" name="option" value="1">
+                <span id="opt1"></span>
+            </label>
+
+            <label>
+                <input type="radio" name="option" value="2">
+                <span id="opt2"></span>
+            </label>
+
+            <label>
+                <input type="radio" name="option" value="3">
+                <span id="opt3"></span>
+            </label>
+        </div>
+
+        <div class="buttons">
+            <button id="nextBtn">Next</button>
+            <button id="resetBtn">Reset</button>
+        </div>
+
+        <h3 id="result"></h3>
+    </div>
+</div>
+
+<script src="quiz.js"></script>
+</body>
+</html>
