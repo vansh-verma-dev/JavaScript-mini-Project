@@ -38,6 +38,9 @@ const questionEl = document.getElementById("question");
 const optionsEl = document.querySelectorAll("input[name='option']");
 const resultEl = document.getElementById("result");
 
+const msg = document.querySelector('.errormsg');
+const deletbtn = document.querySelector('.deletebtn');
+
 function loadQuestion() {
     const q = questions[currentQuestion];
     questionEl.innerText = q.question;
@@ -60,9 +63,13 @@ document.getElementById("nextBtn").addEventListener("click", () => {
     });
 
     if (selected === -1) {
-        alert("Please select an option!");
+        // alert("Please select an option!");
+        msg.style.display="flex";
         return;
     }
+    deletbtn.addEventListener('click',()=>{
+        msg.style.display="none"
+    })
 
     if (selected === questions[currentQuestion].answer) {
         score++;
@@ -90,3 +97,4 @@ document.getElementById("resetBtn").addEventListener("click", () => {
 });
 
 loadQuestion();
+console.log('create a quiz app');

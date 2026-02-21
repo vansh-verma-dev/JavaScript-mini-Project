@@ -70,7 +70,23 @@ button {
     color: white;
 }
  
-
+.errormsg{
+    background-color: red;
+    padding: 10px;
+    display: none;
+    align-items: center;
+    justify-content: space-between;
+    color: black;
+    font-weight: bold;
+}
+.deletebtn{
+    background-color: transparent;
+    font-size: 20px;
+}
+.deletebtn:hover{
+    font-size: 25px;
+    color: rgb(255, 255, 255);
+}
 #result {
     margin-top: 15px;
     text-align: center;
