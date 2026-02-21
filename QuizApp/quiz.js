@@ -1,4 +1,4 @@
- const questions = [
+const questions = [
     {
         question: "HTML ka full form kya hai?",
         options: [
