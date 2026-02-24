@@ -1,100 +1,180 @@
-*{
-    margin: 0;
-    padding: 0;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
 }
-body{
-    background: url('https://i.pinimg.com/1200x/a6/bd/4d/a6bd4db7ee7053689bd971b36cbcd1ef.jpg');
-    background-position: center;
-    background-size: cover;
-    height: 100vh;
-    width: 100vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.container{
-    height: 80vh;
-    width: 80vw;
-    background-color: transparent;
-   box-shadow: 5px 0 15px 5px gray;
-    display: flex;
-    justify-content: center;
-    border-radius: 20px;
-    overflow: hidden;
-}
-.image-left{
-   background: url('https://i.pinimg.com/1200x/c1/7f/78/c17f78e50861e6aa534599dae0d767a3.jpg');
-   background-position: center;
-   background-repeat: no-repeat;
-   background-size: cover;
-    height: 100%;
-    width: 50%;
-}
-.login-page{
-    padding: 20px;
- 
-    height: 100%;
-    width: 50%;
-}
-.login-page h1{
-    color: white;
-    font-size: 35px;
-}
-.login-page p{
-    color: white;
-    font-size: 19px;
-}
-#name-input,
-#Surname-input{
-    margin-top: 20px;
-    width: 220px;
-    height: 40px;
-    border: none;
-    padding: 5px;
-    margin-right: 20px;
-    border-radius: 10px;
-}
-#email-input,
-#password{
-    height: 40px;
-    margin-top: 10px;
-    width: 90%;
-    border-radius: 10px;
-    padding: 5px;
-    border: none;
-    outline: none;
-}
-.login-page h3{
-    font-size: 18px;
-    margin-top: 10px;
-    color: white;
-}
-.accountBtn{
-    width: 92%;
-    margin-top: 10px;
-    height: 40px;
-    border-radius: 10px;
-    border: none;
-}
-.platform-icon{
-   
-    margin-top: 20px;
-height: 45px;
-width: 90%;
-display: flex;
-align-items: center;
-justify-content: space-around;
-}
-.platform-icon button{
-    height: 100%;
-    font-size: 16px;
-    align-items: center;
-    justify-content: center;
-    display: flex;
-    gap: 10px;
-    width: 40%;
-}
-.platform-icon button i{
-    font-size: 30px;
 
+body {
+  background: url("https://i.pinimg.com/1200x/a6/bd/4d/a6bd4db7ee7053689bd971b36cbcd1ef.jpg")
+    no-repeat center center/cover;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  height: 80vh;
+  width: 80vw;
+  display: flex;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 5px 0 15px 5px rgba(114, 114, 114, 0.5);
+  backdrop-filter: blur(10px);
+}
+
+.image-left {
+  background: url("https://i.pinimg.com/1200x/c1/7f/78/c17f78e50861e6aa534599dae0d767a3.jpg")
+    no-repeat center center/cover;
+  width: 50%;
+}
+.login-page {
+  width: 50%;
+  padding: 40px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(15px);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.login-page h1 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.login-page p {
+  font-size: 16px;
+  margin-bottom: 20px;
+  font-weight: 300;
+}
+.login-page p a {
+  color: rgb(0, 4, 255);
+}
+
+#name-input,
+#Surname-input {
+  width: 48%;
+  height: 42px;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  margin-bottom: 15px;
+  margin-right: 7px;
+  outline: none;
+}
+
+#email-input,
+#password {
+  width: 100%;
+  height: 42px;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  margin-bottom: 15px;
+  outline: none;
+}
+
+input {
+  transition: 0.3s;
+}
+
+input:focus {
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+  transform: scale(1.02);
+}
+.terms {
+  display: flex;
+  align-items: center;
+  height: 25px;
+  padding-top: 10px;
+  margin-bottom: 10px;
+}
+.terms input[type="checkbox"] {
+  transform: scale(1.5);
+  cursor: pointer;
+  margin-bottom: 15px;
+  margin-right: 10px;
+}
+.accountBtn {
+  width: 100%;
+  height: 42px;
+  border-radius: 10px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  background-color: rgb(56, 56, 216);
+   color: white;
+  transition: 0.3s;
+}
+
+.accountBtn:hover {
+  background-color: rgb(16, 16, 100);
+  transform: scale(1.03);
+}
+
+/* Social Buttons */
+.platform-icon {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.platform-icon button {
+  width: 48%;
+  height: 45px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  transition: 0.3s;
+}
+
+.platform-icon button:hover {
+  transform: scale(1.05);
+}
+
+.platform-icon button i {
+  font-size: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+  .container {
+    flex-direction: column;
+    height: auto;
+    width: 95%;
+    position: fixed;
+    top: 10;
+    left: 0;
+  }
+
+  .image-left {
+ display: none;
+  }
+
+  .login-page {
+    width: 100%;
+    padding: 25px;
+  }
+
+  #name-input,
+  #Surname-input {
+    width: 100%;
+  }
+
+  .platform-icon {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .platform-icon button {
+    width: 100%;
+  }
 }
