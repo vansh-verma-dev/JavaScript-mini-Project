@@ -16,19 +16,85 @@ body{
     height: 80vh;
     width: 80vw;
     background-color: transparent;
-    border: 2px solid black;
+   box-shadow: 5px 0 15px 5px gray;
     display: flex;
     justify-content: center;
     border-radius: 20px;
     overflow: hidden;
 }
 .image-left{
-        background-color: rgb(200, 255, 0);
+   background: url('https://i.pinimg.com/1200x/c1/7f/78/c17f78e50861e6aa534599dae0d767a3.jpg');
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;
     height: 100%;
     width: 50%;
 }
 .login-page{
-    background-color: red;
+    padding: 20px;
+ 
     height: 100%;
     width: 50%;
+}
+.login-page h1{
+    color: white;
+    font-size: 35px;
+}
+.login-page p{
+    color: white;
+    font-size: 19px;
+}
+#name-input,
+#Surname-input{
+    margin-top: 20px;
+    width: 220px;
+    height: 40px;
+    border: none;
+    padding: 5px;
+    margin-right: 20px;
+    border-radius: 10px;
+}
+#email-input,
+#password{
+    height: 40px;
+    margin-top: 10px;
+    width: 90%;
+    border-radius: 10px;
+    padding: 5px;
+    border: none;
+    outline: none;
+}
+.login-page h3{
+    font-size: 18px;
+    margin-top: 10px;
+    color: white;
+}
+.accountBtn{
+    width: 92%;
+    margin-top: 10px;
+    height: 40px;
+    border-radius: 10px;
+    border: none;
+}
+.platform-icon{
+   
+    margin-top: 20px;
+height: 45px;
+width: 90%;
+display: flex;
+align-items: center;
+justify-content: space-around;
+}
+.platform-icon button{
+    height: 100%;
+    font-size: 16px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    gap: 10px;
+    width: 40%;
+}
+.platform-icon button i{
+    font-size: 30px;
+
 }
