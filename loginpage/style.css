@@ -111,6 +111,7 @@ input:focus {
 }
 .msg{
   padding: 10px;
+  border-radius: 10px;
 }
 .accountBtn:hover {
   background-color: rgb(16, 16, 100);
@@ -121,7 +122,7 @@ input:focus {
   margin-top: 20px;
   display: flex;
   justify-content: space-between;
-background-color: transparent;
+
 }
 
 .platform-icon button {
@@ -136,6 +137,7 @@ background-color: transparent;
   justify-content: center;
   gap: 10px;
   transition: 0.3s;
+
 }
 
 .platform-icon button:hover {
