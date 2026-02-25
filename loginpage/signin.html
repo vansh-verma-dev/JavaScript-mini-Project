@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    />
+    <title>Login Page | vansh</title>
+  </head>
+  <body>
+    <section class="container">
+      <div class="image-left"></div>
+      <div class="login-page">
+        <h1>Welcome Back</h1>
+        <p>Don't have an account? <a href="index.html">Create</a></p>
+        <form>
+          <input type="email" placeholder="Email" id="email-input" required />
+          <input
+            type="password"
+            placeholder="password"
+            id="password"
+            required
+          />
+          <div class="terms">
+            <input type="checkbox" id="checkbox" />
+            <p>Remember me  <a href="#">Forget password</a></p>
+          </div>
+          <button onclick="Createaccounnt()" class="accountBtn">Login</button>
+          <div class="platform-icon">
+            <button id="googlebtn">
+              <i class="fa-brands fa-google-plus-g"></i>Google
+            </button>
+            <button id="Applebtn">
+              <i class="fa-brands fa-apple"></i>Apple
+            </button>
+          </div>
+        </form>
+      </div>
+    </section>
+  </body>
+</html>
