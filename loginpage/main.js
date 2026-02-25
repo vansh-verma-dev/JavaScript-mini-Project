@@ -40,28 +40,59 @@ document.querySelector(".accountBtn").addEventListener("click", (e) => {
 });
 
 //------signin page logic---
-document.querySelector('.accountBtn').addEventListener('click',(e)=>{
+document.getElementById('loginBtn').addEventListener('click', (e) => {
   e.preventDefault();
- 
+
   const email = document.getElementById("email-input").value.trim();
   const password = document.getElementById("password").value.trim();
   const msg = document.querySelector(".msg");
 
-  if(email ==="" || password ===""){
- msg.innerHTML = "please fill all requird fields"
- msg.style.backgroundColor='red'
-  }
-  setInterval(()=>{
-    msg.style.color='transparent'
-    msg.style.backgroundColor='transparent';
-  },3000)
+  if(email === "" || password === ""){
+    msg.innerHTML = "Please fill all required fields";
+    msg.style.backgroundColor = "red";
+     // Auto hide message
+  setTimeout(() => {
+    msg.innerHTML = "";
+    msg.style.backgroundColor = "transparent";
+  }, 3000);
 
-  //get data for localstorage
+    return;
+  }
+
   let getdata = JSON.parse(localStorage.getItem("user"));
 
-  
-  if(email === getdata.email && password=== getdata.password){
-    msg.innerHTML='login succesfull'
+  if(!getdata){
+    msg.innerHTML = "No account found. Please sign up.";
+    msg.style.backgroundColor = "red";
+     // Auto hide message
+  setTimeout(() => {
+    msg.innerHTML = "";
+    msg.style.backgroundColor = "transparent";
+  }, 3000);
+
+    return;
+
   }
 
-})
+  if(email === getdata.email && password === getdata.password){
+    msg.textContent = "Login successful";
+    msg.style.backgroundColor = "green";
+
+
+    setTimeout(() => {
+      window.location.href = "dashboard.html";
+    }, 2000);
+
+  } else {
+    msg.innerHTML = "Invalid email or password";
+    msg.style.backgroundColor = "red";
+     // Auto hide message
+  setTimeout(() => {
+    msg.innerHTML = "";
+    msg.style.backgroundColor = "transparent";
+  }, 3000);
+
+  }
+
+ 
+});
