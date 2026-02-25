@@ -109,13 +109,14 @@ input:focus {
    color: white;
   transition: 0.3s;
 }
-
+.msg{
+  padding: 10px;
+}
 .accountBtn:hover {
   background-color: rgb(16, 16, 100);
   transform: scale(1.03);
 }
-
-/* Social Buttons */
+ 
 .platform-icon {
   margin-top: 20px;
   display: flex;
@@ -142,6 +143,10 @@ input:focus {
 
 .platform-icon button i {
   font-size: 20px;
+}
+.msg{
+  text-align: center;
+  color: black;
 }
 
 /* Responsive Design */
