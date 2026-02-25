@@ -121,6 +121,7 @@ input:focus {
   margin-top: 20px;
   display: flex;
   justify-content: space-between;
+background-color: transparent;
 }
 
 .platform-icon button {
