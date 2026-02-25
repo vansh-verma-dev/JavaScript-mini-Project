@@ -30,5 +30,7 @@ document.querySelector(".accountBtn").addEventListener("click", (e) => {
   };
   localStorage.setItem("user", JSON.stringify(user));
   msg.innerHTML="account create succesfull"
-  msg.style.backgroundColor='green'
+  msg.style.backgroundColor='green';
+
+  
 });
