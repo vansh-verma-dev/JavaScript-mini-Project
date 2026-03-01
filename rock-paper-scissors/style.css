@@ -14,7 +14,7 @@ body {
   overflow: hidden;
 }
 .welcome-page {
-  display: none;
+  display: block;
   padding: 20px;
   height: 70%;
   width: 70%;
@@ -109,7 +109,7 @@ body {
 /* ----game-page--- */
 
 .game-page {
-  display: block;
+  display: none;
   padding: 20px;
   height: 70%;
   width: 70%;
@@ -117,7 +117,6 @@ body {
   box-shadow: 5px 10px 30px 12px black;
   border: 2px solid purple;
   justify-content: center;
-  display: flex;
   align-items: center;
 }
 .game-board h1 {
@@ -318,6 +317,11 @@ body {
       0% 0%;
   }
 }
+.count{
+  margin-top: 20px;
+  font-weight: 600;
+}
+
 @media (max-width: 480px) {
   .welcome-page {
     height: 100%;
