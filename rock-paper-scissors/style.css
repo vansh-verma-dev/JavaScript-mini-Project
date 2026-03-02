@@ -106,9 +106,11 @@ body {
   width: 100%;
 }
 
+ 
 /* ----game-page--- */
 
 .game-page {
+  position:absolute;
   display: none;
   padding: 20px;
   height: 70%;
@@ -325,6 +327,16 @@ body {
   font-weight: 700;
   display: flex;
   justify-content: space-around;
+}
+.result{
+  height: auto;
+  padding: 10px;
+  font-size: 30px;
+  color: white;
+ 
+  display: flex;
+  justify-content: center;
+  align-items: center ;
 }
 
 @media (max-width: 480px) {

@@ -1,51 +1,93 @@
-
-//welcome page & game-page toggle
+// ===============================
+// Welcome Page to Game Page Toggle
+// ===============================
 document.getElementById("continueBtn").addEventListener("click", () => {
-  const GamePage = document.querySelector(".game-page");
-  const WelcomePage = document.querySelector(".welcome-page");
+  const gamePage = document.querySelector(".game-page");
+  const welcomePage = document.querySelector(".welcome-page");
 
-  GamePage.style.display = "flex";
-  WelcomePage.style.display = "none";
+  gamePage.style.display = "flex";
+  welcomePage.style.display = "none";
 });
 
-//All btn click add Totla count 
-count = 0;
+// ===============================
+// Variables & Elements
+// ===============================
+let count = 0;
+let yourScore = 0;
+let aiScore = 0;
 
-const Countbtn = document.querySelectorAll(".Countbtn");
-Countbtn.forEach((btn)=>{
-btn.addEventListener("click", () => {
-  let countvalue = document.getElementById("Count");
+const countValue = document.getElementById("Count");
+const buttons = document.querySelectorAll(".Countbtn");
 
-  count++;
-  countvalue.innerText = count;
-})
+const yourScoreElement = document.querySelector(".Yourscore");
+const aiScoreElement = document.querySelector(".Aiscore");
+
+const result = document.querySelector(".result");
+const userSelect = document.querySelector(".UserSelect");
+const aiSelect = document.querySelector(".Aiselect");
+
+// ===============================
+// Button Click = One Game Round
+// ===============================
+buttons.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    // Total Click Count
+    count++;
+    countValue.innerText = count;
+
+    // Get Choices
+    const userChoice = btn.innerText.toLowerCase();
+    const aiChoice = generateAIChoice();
+
+    // Show Choices on Screen
+    userSelect.innerText = "You Choice: " + userChoice;
+    aiSelect.innerText = "AI Choice: " + aiChoice;
+
+    // ===============================
+    // Compare Logic
+    // ===============================
+    if (userChoice === aiChoice) {
+      result.innerText = "Draw";
+      result.style.backgroundColor = "Orange";
+      //msg hide after 3sec
+      setTimeout(() => {
+        result.innerText = "";
+        result.style.backgroundColor = "";
+      }, 3000);
+    } else if (
+      (userChoice === "rock" && aiChoice === "scissor") ||
+      (userChoice === "paper" && aiChoice === "rock") ||
+      (userChoice === "scissor" && aiChoice === "paper")
+    ) {
+      yourScore++;
+      result.innerText = "You Win ";
+      result.style.backgroundColor = "green";
+        //msg hide after 3sec
+      setTimeout(() => {
+        result.innerText = "";
+        result.style.backgroundColor = "";
+      }, 3000);
+    } else {
+      aiScore++;
+      result.innerText = "You Lose ";
+      result.style.backgroundColor = "red";
+        //msg hide after 3sec
+      setTimeout(() => {
+        result.innerText = "";
+        result.style.backgroundColor = "";
+      }, 3000);
+    }
+
+    yourScoreElement.innerText = yourScore;
+    aiScoreElement.innerText = aiScore;
+  });
 });
 
-//User Choice Btn 
-Countbtn.forEach((btn)=>{
-  btn.addEventListener('click',()=>{
-    const UserChoice = btn.innerText.toLowerCase();
-    playGame(UserChoice);
-  })
-
-})
-
-const UserSelect = document.querySelector('.UserSelect');
-const Aiselect = document.querySelector('.Aiselect');
-// print user choice 
-function playGame(Choice){
-console.log("User :", Choice);
-UserSelect.innerHTML = "You Choice:  " + Choice;
-  Aiselect.innerHTML = "Ai Choice: "+Aigenrate();
- 
+// ===============================
+// AI Random Choice Generator
+// ===============================
+function generateAIChoice() {
+  const choices = ["rock", "paper", "scissor"];
+  const randomIndex = Math.floor(Math.random() * 3);
+  return choices[randomIndex];
 }
-
-// choice Ai 
-
-function Aigenrate(){
-  let AiChoices = ['rock', 'paper' , 'scissor']
-  let randamChoices = Math.floor(Math.random() *3);
-   return  AiChoices[randamChoices];
-}
-
-
