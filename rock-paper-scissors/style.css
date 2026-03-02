@@ -321,6 +321,11 @@ body {
   margin-top: 20px;
   font-weight: 600;
 }
+.selected-btn{
+  font-weight: 700;
+  display: flex;
+  justify-content: space-around;
+}
 
 @media (max-width: 480px) {
   .welcome-page {
