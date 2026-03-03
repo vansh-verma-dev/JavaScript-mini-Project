@@ -1,7 +1,131 @@
-*{
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
 }
-body{
+
+body {
+  background: #111;
+  color: #fff;
+}
+nav{
+  padding: 5px;
+  height: auto;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 2px solid aqua;
+}
+nav h1{
+  color: aqua;
+  font-size: 32px;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 60px;
+  background: #000;
+  border-bottom: 2px solid aqua;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: aqua;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #fff;
+  transition: 0.3s;
+}
+
+.nav-links a:hover {
+  color: aqua;
+  padding-bottom: 6px;
+  border-bottom: 2px solid aqua;
+}
+
+/* ---hero-section---- */
+.hero{
+ 
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color:white;
+  margin-bottom: 20px;
+}
+.hero span{
+  margin-top: 20px;
+  text-align: center;
+}
+.hero span h1{
+  margin-bottom: 5px;
+  font-size: 40px;
+}
+.heading{
+  cursor: pointer;
+  padding: 10px;
+  font-size: 30px;
+  margin-left: 30px;
+  border-left: 5px solid aqua;
+}
+ 
+.card-container{
+  height: auto;
+ width: 80vw;
+  margin-top: 20px;
+  margin-left: 80px;
+  padding: 20px;
+ 
+  overflow-x: scroll;
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+}
+.card-container::-webkit-scrollbar{
+  background-color: transparent;
+}
+.card{
   background-color: black;
+  width: 350px;
+  height: auto;
+  border-radius: 10px;
+  padding: 20px;
+}
+ 
+.card h1{
+  color: aqua;
+  font-size: 25px;
+}
+.card p{
+  color: white;
+  padding-top: 5px;
+}
+.card button{
+  background-color: blue;
+  color: white;
+  width: 120px;
+  height: 35px;
+  cursor: pointer;
+  border: none;
+  padding: 5px;
+  margin-top: 15px;
+      font-size: 16px;
+
+}
+.card button:hover{
+  background-color:  aqua;
+    box-shadow: 5px 1px 19px 0 aqua;
+font-weight: 700;
 }
