@@ -2,23 +2,23 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Segoe UI', sans-serif;
+  font-family: "Segoe UI", sans-serif;
 }
 
 body {
   background: #111;
   color: #fff;
 }
-nav{
+nav {
   padding: 5px;
   height: auto;
   width: 100%;
   display: flex;
   justify-content: space-between;
   border-bottom: 2px solid aqua;
-  box-shadow: 0 5px 20px rgba(0,255,255,0.08);
+  box-shadow: 0 5px 20px rgba(0, 255, 255, 0.08);
 }
-nav h1{
+nav h1 {
   color: aqua;
   font-size: 32px;
 }
@@ -65,41 +65,45 @@ nav h1{
 }
 
 /* ---hero-section---- */
-.hero{
- 
+.hero {
   width: 100%;
   padding: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
-  color:white;
+  color: white;
   margin-bottom: 20px;
 }
-.hero span{
+.hero span {
   margin-top: 20px;
   text-align: center;
 }
-.hero span h1{
+.hero span h1 {
   margin-bottom: 5px;
   font-size: 40px;
 }
-.heading{
+/* ---heading--- */
+.heading {
   cursor: pointer;
   padding: 10px;
   font-size: 30px;
-  margin-left: 30px;
+  margin-left: 7%;
   border-left: 5px solid aqua;
 }
- 
+
 .card-container {
-  width: 90%;
+  width: 100%;
   margin: 40px auto;
+  padding: 20px;
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
-  gap: 30px;
+  gap: 20px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
 }
-.card-container::-webkit-scrollbar{
+.card-container::-webkit-scrollbar {
   background-color: transparent;
 }
 .card {
@@ -107,22 +111,21 @@ nav h1{
   width: 350px;
   border-radius: 12px;
   padding: 25px;
-  transition: 0.4s ease; 
+  transition: 0.4s ease;
 }
-
 .card:hover {
   transform: translateY(-12px);
-  box-shadow: 0 10px 45px rgba(0,255,255,0.25);
+  box-shadow: 0 10px 45px rgba(0, 255, 255, 0.25);
 }
-.card h1{
+.card h1 {
   color: aqua;
   font-size: 25px;
 }
-.card p{
+.card p {
   color: white;
   padding-top: 5px;
 }
- .card button {
+.card button {
   background: aqua;
   color: #000;
   width: 140px;
@@ -139,5 +142,110 @@ nav h1{
 .card button:hover {
   background: #00cccc;
   transform: scale(1.05);
-  box-shadow: 0 10px 25px rgba(0,255,255,0.4);
+  box-shadow: 0 10px 25px rgba(0, 255, 255, 0.4);
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  color: aqua;
+  cursor: pointer;
+}
+.stats {
+  padding: 20px;
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  justify-content: center;
+}
+.counter{
+  color: aqua;
+  font-size: 40px;
+}
+.stat-box {
+  text-align: center;
+}
+
+/* Mobile View */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 15px 20px;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background: #000;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px 0;
+    display: none;
+    border-top: 1px solid aqua;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+  .hero span h1 {
+    font-size: 30px;
+    color: aqua;
+  }
+  .hero span p {
+    font-size: 14px;
+    color: aliceblue;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .card-container {
+    justify-content: start;
+  }
+  .stats {
+  padding: 20px;
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  justify-content: center;
+}
+.counter{
+  color: aqua;
+  font-size: 20px;
+}
+.stat-box {
+  text-align: center;
+}
+.stat-box p {
+  font-size: 12px;
+}
+}
+
+/* Desktop Scrollbar */
+@media (min-width: 769px) {
+  .card-container::-webkit-scrollbar {
+    height: 6px;
+    background: transparent;
+  }
+}
+
+/* Mobile Scrollbar Visible */
+@media (max-width: 768px) {
+  .card-container::-webkit-scrollbar {
+    height: 6px;
+  }
+
+  .card-container::-webkit-scrollbar-track {
+    background: #222;
+    border-radius: 10px;
+  }
+
+  .card-container::-webkit-scrollbar-thumb {
+    background: aqua;
+    border-radius: 10px;
+  }
 }

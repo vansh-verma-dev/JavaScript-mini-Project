@@ -16,6 +16,7 @@
       <li><a href="#">Other Projects</a></li>
       <li><a href="#">Go Back</a></li>
     </ul>
+    <div class="menu-toggle">&#9776;</div>
   </nav>
 
   <!--Hero section-->
@@ -37,26 +38,54 @@
     <div class="card">
       <h1>Rock Paper Sissore Game</h1>
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, aliquam?</p>
-      <button>View Project</button>
+    <a href="rock-paper-scissors/index.html" target="_blank">  <button>View Project</button></a>
     </div>
 
-    <!--card-1-->
+    <!--card-2-->
     <div class="card">
       <h1>Calculator</h1>
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, aliquam?</p>
-      <button>View Project</button>
+      <a href="calculator/index.html" target="_blank"><button>view project</button></a>
     </div>
 
-      <!--card-1-->
+      <!--card-3-->
     <div class="card">
-      <h1>Calculator</h1>
+      <h1>BMI Calculation</h1>
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, aliquam?</p>
-      <button>View Project</button>
+   <a href="BMI Calaculation/index.html" target="_blank"><button>view project</button></a>
     </div>
   </div>
 
    <!--javaScript projects  container 2 -->
      <div class="card-container">
+    <!--card-1-->
+    <div class="card">
+      <h1>BackGround Colour Change</h1>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, aliquam?</p>
+    <a href="backgroundChange/changeBg.html" target="_blank">  <button>View Project</button></a>
+    </div>
+
+    <!--card-1-->
+    <div class="card">
+      <h1>Login Page</h1>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, aliquam?</p>
+   <a href="loginpage/index.html" target="_blank">   <button>View Project</button></a>
+    </div>
+
+      <!--card-1-->
+    <div class="card">
+      <h1>Todo List</h1>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, aliquam?</p>
+     <a href="todo-app/index.html" target="_blank"> <button>View Project</button></a>
+    </div>
+  </div>
+
+    <!--javaScript projects  -->
+
+  <!--Heading-->
+  <div class="heading" id="JavaScriptprojects">React Projects</div>
+
+      <div class="card-container">
     <!--card-1-->
     <div class="card">
       <h1>Rock Paper Sissore Game</h1>
@@ -79,5 +108,57 @@
     </div>
   </div>
 
+  <!-- Stats Section -->
+<section class="stats">
+  <div class="stat-box">
+    <h2 class="counter" data-target="25">0</h2>
+    <p>Projects Developed</p>
+  </div>
+
+  <div class="stat-box">
+    <h2 class="counter" data-target="10">0</h2>
+    <p>Technologies Explored</p>
+  </div>
+
+  <div class="stat-box">
+    <h2 class="counter" data-target="15">0</h2>
+    <p>APIs Integrated</p>
+  </div>
+
+  <div class="stat-box">
+    <h2 class="counter" data-target="100">0</h2>
+    <p>Hours of Full-Stack Practice</p>
+  </div>
+</section>
 </body>
+<script>
+  const toggle = document.querySelector(".menu-toggle");
+  const navLinks = document.querySelector(".nav-links");
+
+  toggle.addEventListener("click", () => {
+    navLinks.classList.toggle("active");
+  });
+ 
+ 
+  const counters = document.querySelectorAll(".counter");
+
+  counters.forEach(counter => {
+    const updateCount = () => {
+      const target = +counter.getAttribute("data-target");
+      const count = +counter.innerText;
+
+      const increment = target / 100;
+
+      if (count < target) {
+        counter.innerText = Math.ceil(count + increment);
+        setTimeout(updateCount, 20);
+      } else {
+        counter.innerText = target + "+";
+      }
+    };
+
+    updateCount();
+  });
+ 
+</script>
 </html>
