@@ -1,113 +1,85 @@
-# JavaScript Mini Projects Collection 
+Web Development Projects Hub
 
-This repository contains a collection of beginner-to-intermediate level JavaScript projects built to strengthen DOM manipulation, events, logic building, and UI skills.
+Welcome to my Web Development Projects Repository 
 
-Instead of isolated projects, everything is organized in one place so anyone reviewing can easily explore practical implementations of core JavaScript concepts.
+This repository contains a collection of my practical projects built using:
 
----
+HTML
 
-##  Projects Included
+CSS
 
-### 1 Calculator
+JavaScript
 
-Basic arithmetic calculator using JavaScript event handling.
+React (Learning Phase 🚀)
 
-**Concepts used**
+The goal of this repository is to showcase my learning journey and continuously add more advanced real-world projects over time.
 
-* DOM selection
-* Click events
-* Operators logic
-* Input handling
+📂 Project Categories 
 
----
+ HTML & CSS Projects
+Project	Description	Live Demo
+Landing Page	Responsive modern landing page	
+Portfolio UI	Personal portfolio layout design link=> https://portfolio-vyj8.onrender.com
 
-### 2 To-Do List App
+ JavaScript Projects
+Project	Description	Live Demo   link=>   https://javascript-mini-project.onrender.com
+Calculator	Basic arithmetic calculator	   
+To-Do List App	Dynamic task manager	  
+Background Color Changer	Auto color changer using setInterval()	 
+BMI Calculator	BMI calculation with health category	 
+ Rock Paper Scissors	Interactive game with score tracking	 
 
-Add, delete and manage daily tasks dynamically.
 
-**Concepts used**
+ React Projects (In Progress)
+Project	Description	Status
+Counter App	State management basics	✅ Completed
+Color Changer	useState practice	✅ Completed
+Portfolio (React Version)	Advanced UI + components 
 
-* Dynamic element creation
-* Event delegation
-* Array logic
-* UI updates
+More advanced React & Full-Stack projects coming soon...
 
----
 
-### 3 Background Color Changer (setInterval)
+Once deployed, live links will be updated in the tables above.
 
-Automatically changes background color after interval.
+🛠 Tech Stack
 
-**Concepts used**
+HTML5
 
-* `setInterval`
-* Random color generation
-* Timing functions
+CSS3 (Flexbox, Responsive Design)
 
----
+JavaScript (ES6+)
 
-### 4 BMI Calculator
+React (Currently Learning)
 
-Calculates Body Mass Index and shows health category.
+📈 Learning Journey
 
-**Features**
+This repository represents my growth from:
 
-* Input validation
-* Category detection
-* Dynamic UI updates
+Basic DOM manipulation
 
-**Concepts used**
+To interactive UI projects
 
-* Form handling
-* Number conversion
-* Conditional logic
+To structured React applications
 
----
+And eventually Full-Stack Development
 
-## What I Learned
+New projects will be added regularly as I improve my skills.
 
-Through these projects I practiced:
+🎯 Future Goals
 
-* DOM Manipulation
-* Event Handling
-* Conditional Logic
-* Form Validation
-* JavaScript Functions
-* User Interaction Handling
+Add Advanced JavaScript Projects
 
-These projects helped me understand how real user input is processed and displayed dynamically on a webpage.
+Build Real-World React Applications
 
----
+Integrate APIs
 
-##  Tech Stack
+Create Full-Stack Projects
 
-* HTML
-* CSS
-* JavaScript (Vanilla JS)
+Deploy Production-Level Applications
 
-No libraries or frameworks were used — everything built from scratch for learning purposes.
+👨‍💻 About Me
 
----
+Hi, I'm Vansh Verma 👋
+An aspiring Full-Stack Web Developer passionate about building interactive and user-friendly web applications.
 
-##  How to Run
-
-1. Download or clone the repository
-2. Open project folder
-3. Run `index.html` in browser
-
-No installation required.
-
----
-
-##  Purpose of this Repository
-
-This repository is part of my learning journey to become a Web Developer.
-The goal is to master JavaScript fundamentals before moving to advanced frameworks.
-
----
-
-## Author
-
-**Vansh verma**
-
-Learning Web Development and building practical projects daily.
+Currently improving my skills daily and working towards becoming industry-ready.
