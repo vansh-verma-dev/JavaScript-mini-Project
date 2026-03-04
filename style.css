@@ -125,26 +125,43 @@ nav h1 {
   color: white;
   padding-top: 5px;
 }
-.card button {
+.card  .view-btn {
   background: aqua;
   color: #000;
-  width: 140px;
+  width: 120px;
   height: 40px;
-  border-radius: 25px;
   cursor: pointer;
   border: none;
+  margin-right: 30px;
   margin-top: 20px;
   font-size: 15px;
   font-weight: bold;
   transition: 0.3s ease;
 }
 
-.card button:hover {
+.card  .view-btn:hover {
   background: #00cccc;
   transform: scale(1.05);
   box-shadow: 0 10px 25px rgba(0, 255, 255, 0.4);
 }
+.code-btn{
+ background-color:transparent;
+ border: 2px solid aqua;
+  color: aqua;
+  width: 120px;
+  height: 40px;
+  cursor: pointer;
+  margin-top: 20px;
+  font-size: 15px;
+  font-weight: bold;
+  transition: 0.3s ease;
 
+}
+.code-btn:hover{
+  background-color: aqua;
+  color: white;
+   box-shadow: 0 10px 25px rgba(0, 255, 255, 0.4);
+}
 .menu-toggle {
   display: none;
   font-size: 28px;
